@@ -8,7 +8,7 @@
       }
 	#responsive-image {  
 		width: 100%; 
-		max-width: 1400px; 
+		<!-- max-width: 1400px;  -->
 		height: auto; 
 	} 
 	</style>
@@ -21,8 +21,29 @@
   </head>
 	
 	<body>
+
+		
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script> 
+	<script src="detectmobilebrowser.js"></script> 
+
+
+	
 	    <span class="img-container">
 		      <img src="wedding_v2.jpg" id="responsive-image">
 		</span>
+		
+	<script language="javascript">		
+			if(jQuery.browser.mobile)
+			{
+				<!-- alert("모바일"); -->
+				<!-- document.getElementById("responsive-image").style.max-width: "1400px"; -->
+			}
+			else
+			{
+				<!-- alert("컴터"); -->
+				<!-- alert(document.getElementById("responsive-image").style.maxWidth); -->
+				document.getElementById("responsive-image").style.maxWidth = "600px";
+			}		
+	</script>
 	</body>
 </html>
